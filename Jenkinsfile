@@ -18,5 +18,11 @@ docker ps
       }
     }
 
+    stage('Pull test code') {
+      steps {
+        git(url: 'https://github.com/ngocdangrby/siddhi-test-suite', branch: 'master')
+      }
+    }
+
   }
 }
